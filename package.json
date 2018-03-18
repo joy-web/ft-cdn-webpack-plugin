@@ -1,0 +1,79 @@
+{
+  "name": "ft-cdn-webpack-plugin",
+  "version": "0.0.1",
+  "author": {
+    "name": "Jeriah Lee",
+    "email": "jeriah_lee@163.com"
+  },
+  "description": "Webpack plugin for static-ftcms",
+  "keywords": [
+    "webpack",
+    "webpack-plugin",
+    "cdn"
+  ],
+  "scripts": {
+    "coverage": "npm test && nyc report --reporter=html",
+    "lint": "eslint --fix src",
+    "test": "npm run lint && nyc ava test/",
+    "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "promise": "^8.0.1",
+    "slash": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.10",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "coveralls": "^2.11.15",
+    "cpy-cli": "^1.0.1",
+    "coveralls": "^2.11.16",
+    "cross-env": "^5.1.1",
+    "css-loader": "^0.26.1",
+    "eslint": "^4.8.0",
+    "eslint": "^4.12.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-ava": "^4.3.0",
+    "eslint-plugin-react": "^7.5.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "incstr": "^1.2.3",
+    "moment": "^2.12.0",
+    "nyc": "^11.3.0",
+    "postcss-loader": "^2.0.9",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0"
+  },
+  "engines": {
+    "node": ">=6.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:joy-web/ft-cdn-webpack-plugin.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joy-web/ft-cdn-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/joy-web/ft-cdn-webpack-plugin#readme",
+  "ava": {
+    "files": [
+      "test/*.js"
+    ]
+  }
+}
